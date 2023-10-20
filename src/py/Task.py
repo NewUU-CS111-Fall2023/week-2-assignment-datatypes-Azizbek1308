@@ -23,7 +23,7 @@ class find_number():
 
 class long_arithmetics():
     def long_arithmetics(self,A):
-        x=randint(10**100,10**101-1)
+        x=randint(10**99,10**100-1)
         print(f"{x} is random 100 digit number \n")
         print(float(x/A))
 
