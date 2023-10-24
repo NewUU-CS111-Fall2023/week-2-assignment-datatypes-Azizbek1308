@@ -1,21 +1,17 @@
-/*
- * Author:
- * Date:
- */
-
-#include <iostream>
 #include "task_1.h"
 
-int main() {
-    std::cout << "Task 1" << std::endl;
-    // call for task 1
-    std::cout << "Task 2" << std::endl;
-    // call for task 2
-    std::cout << "Task 3" << std::endl;
-    // call for task 3
-    std::cout << "Task 4" << std::endl;
-    // call for task 4
-    std::cout << "Task 5" << std::endl;
-    // call for task 5
-    return 0;
+bool leap_year(int year) {
+    // implementation of leap_year function
+}
+
+int find_number(int arr[], int n, int x) {
+    // implementation of find_number function
+}
+
+long long long_arithmetics(long long a, long long b) {
+    // implementation of long_arithmetics function
+}
+
+bool string_matching(string str1, string str2) {
+    // implementation of string_matching function
 }
