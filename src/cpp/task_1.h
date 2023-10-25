@@ -66,6 +66,10 @@ public:
 };
 
 int main() {
-    std::cout << "hi" << std::endl;
+
+    leap_year year1;
+    int x;
+    std::cin>>x;
+    year1.leap_year1(x);
     return 0;
 }

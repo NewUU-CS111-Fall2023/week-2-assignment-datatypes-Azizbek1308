@@ -1,5 +1,4 @@
 from random import randint
-# task_1
 class leap_year():
     def leap_year(self,n):
         if n % 4 == 0:
@@ -33,6 +32,26 @@ class string_matching():
             print(f'{x[0:-1].index(x[-1])} is index of "{x[-1]}" in "{" ".join(x[0:-1])}" sentence! ')
         else:
             print("no match")
+
+class spawn_prediction():
+    def spawn_prediction(self,x,y):
+        lists=[]
+        a=0
+        j=0
+        lists.append(y)
+        for i in range(1,x,1):
+            y=list(input("Please enter a cordinate! \n").split(";"))
+            lists.append(y)
+        while a<=3 and j<x-1:
+            a=((int(lists[j][0])-int(lists[j+1][0]))**2+(int(lists[j][1])-int(lists[j+1][1]))**2)**(1/2)
+            j+=1
+        if j==x-1 and a<=3:
+            print("The charecter is alive")
+        else:
+            print(f"The character is dead at the {j+1} cordinate!")
+
+
+
 
 
 if __name__ == "__main__":
