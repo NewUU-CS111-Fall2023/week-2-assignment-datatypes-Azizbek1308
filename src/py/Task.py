@@ -55,4 +55,4 @@ class spawn_prediction():
 
 
 if __name__ == "__main__":
-    print("hi")
+    print("hi Azizbek")

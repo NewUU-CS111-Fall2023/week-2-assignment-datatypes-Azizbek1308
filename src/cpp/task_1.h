@@ -78,6 +78,5 @@ int main() {
     cin>>A;
     LongArithmetics number2;
     number2.longArithmetics1(A);
-    cout<<"hi";
     return 0;
 }
