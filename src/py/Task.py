@@ -1,7 +1,11 @@
 from random import randint
 class leap_year():
     def leap_year(self,n):
-        if n % 4 == 0:
+        if n % 400 == 0 :
+            print(n, " is leap year")
+        elif n%100==0 and n%400!=0:
+            print(n, " is not leap year")
+        elif n%4==0:
             print(n, " is leap year")
         else:
             print(n, " is not leap year")
