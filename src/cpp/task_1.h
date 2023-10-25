@@ -7,15 +7,19 @@
 #include <cstdlib>
 #include <ctime>
 #include <string>
+#include <iostream>
+#include <vector>
+#include <cmath>
 
+using namespace std;
 class leap_year {
 public:
     void leap_year1(int n) {
         if (n % 4 == 0) {
-            std::cout << n << " is leap year" << std::endl;
+            cout << n << " is leap year" << endl;
         }
         else {
-            std::cout << n << " is not leap year" << std::endl;
+            cout << n << " is not leap year" << endl;
         }
     }
 };
@@ -27,49 +31,52 @@ public:
         int n = rand() % 100 + 1;
         while (x != n) {
             if (x > n) {
-                std::cout << "too high" << std::endl;
-                std::cout << std::endl;
-                std::cout << "Please again guess a number!" << std::endl;
-                std::cin >> x;
+                cout << "too high" << endl;
+                cout << endl;
+                cout << "Please again guess a number!" << endl;
+                cin >> x;
             }
             else {
-                std::cout << "too low" << std::endl;
-                std::cout << std::endl;
-                std::cout << "Please again guess a number!" << std::endl;
-                std::cin >> x;
+                cout << "too low" << endl;
+                cout << endl;
+                cout << "Please again guess a number!" << endl;
+                cin >> x;
             }
         }
-        std::cout << "You found this " << x << " number! Congratulations!!! 🥳" << std::endl;
+        cout << "You found this " << x << " number! Congratulations!!! " << endl;
     }
 };
 
-class long_arithmetics {
+class LongArithmetics {
 public:
-    void long_arithmetics1(int A) {
+    void longArithmetics1(double A) {
         srand(time(0));
-        long long x = rand() % (long long)(1e101 - 1e100) + (long long)1e100;
-        std::cout << x << " is random 100 digit number" << std::endl;
-        std::cout << (double)x / A << std::endl;
+        double x = rand() % static_cast<int>(pow(10, 100) - pow(10, 99) + 1) + pow(10, 99);
+        cout << x << " is random 100 digit number" << endl;
+        cout << x / A << std::endl;
     }
 };
 
-class string_matching {
-public:
-    void string_matching1(std::string x) {
-        if (x[x.size() - 1] != x.substr(0, x.size() - 1).find(x[x.size() - 1])) {
-            std::cout << x.substr(0, x.size() - 1).find(x[x.size() - 1]) << " is index of \"" << x[x.size() - 1] << "\" in \"" << x.substr(0, x.size() - 1) << "\" sentence!" << std::endl;
-        }
-        else {
-            std::cout << "no match" << std::endl;
-        }
-    }
-};
 
 int main() {
 
     leap_year year1;
+    cout<<"\"Task_1\""<<endl;
+    cout<<"Please enter a year for checking if it is leap year or not"<<endl;
     int x;
-    std::cin>>x;
+    cin>>x;
     year1.leap_year1(x);
+    cout<<"\"Task_2\""<<endl;
+    find_number number1;
+    int y;
+    cout<<"Please again guess a number!"<<endl;
+    cin>>y;
+    number1.find_number1(y);
+    cout<<"\"Task_3\""<<endl;
+    int A;
+    cout<<"Please enter a number!"<<endl;
+    cin>>A;
+    LongArithmetics number2;
+    number2.longArithmetics1(A);
     return 0;
 }
